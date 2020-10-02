@@ -16,16 +16,16 @@ print
 print 'Values range from 1000 to 2000 (in microseconds), with 1500 being the center.'
 print
 print 'Press Ctrl-C to quit'
-print 
+print
 
 while True:
-	val = raw_input('Enter servo pulsewidth (1000 to 2000):')
-	try:
-		val = int(val)
-	except ValueError:
-		print 'Invalid value, must be between 1000 and 2000!'
-		continue
-	if val < 1000 or val > 2000:
-		print 'Invalid value, must be between 1000 and 2000!'
-		continue
-	servo.set_servo(config.LOCK_SERVO_PIN, val)
+    val = raw_input('Enter servo pulsewidth (1000 to 2000):')
+    try:
+        val = int(val)
+    except ValueError:
+        print 'Invalid value, must be between 1000 and 2000!'
+        continue
+    if val < 1000 or val > 2000:
+        print 'Invalid value, must be between 1000 and 2000!'
+        continue
+    servo.set_servo(config.LOCK_SERVO_PIN, val)
